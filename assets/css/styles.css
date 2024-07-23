@@ -40,6 +40,8 @@ a {
     min-width: 118px;
     height: 50px;
     border-radius: 999px;
+    font-size: 1.6rem;
+    font-weight: 600;
     color: #fff;
     background: #171100;
 }
@@ -85,6 +87,25 @@ a {
 .break-all {
     overflow-wrap: break-word;
     word-break: break-word;
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+    margin-top: 28px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: var(--primary-color);
+    cursor: default;
 }
 /*=============== HEADER ===================*/
 .header {
@@ -139,7 +160,6 @@ nav li a:hover {
 .header .sign-up-btn {
     margin-left: 49px;
     width: 144px;
-    font-size: 1.6rem;
     font-weight: 600;
 }
 /*=================== HERO ===================*/
@@ -231,6 +251,7 @@ nav li a:hover {
 .hero .see-courses-btn {
     background: #ffb900;
     min-width: 180px;
+    height: 64px;
 }
 
 .hero button {
@@ -252,8 +273,6 @@ nav li a:hover {
     margin-left: 14px;
     color: #171100;
     font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 166.667%;
 }
 
 .hero .stats-block {
@@ -399,6 +418,7 @@ nav li a:hover {
 .courses .course-item .book-btn {
     border: none;
     padding: 0;
+    font-size: 1.4rem;
 }
 
 .courses .course-item .book-btn:hover {
@@ -448,25 +468,6 @@ nav li a:hover {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 185.714%;
-}
-
-.testimonial .dots {
-    display: flex;
-    gap: 6px;
-    margin-top: 28px;
-}
-
-.testimonial .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #634700;
-    cursor: pointer;
-}
-
-.testimonial .dot.active {
-    background: var(--primary-color);
-    cursor: auto;
 }
 
 .testimonial .quote {
@@ -529,6 +530,10 @@ nav li a:hover {
     margin-top: 32px;
     min-width: 137px;
     background: var(--primary-color);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 175% */
 }
 
 .features-2 {
@@ -554,4 +559,112 @@ nav li a:hover {
     width: 100%;
     height: 440px;
     object-fit: cover;
+}
+/*=================== BLOG ===================*/
+.blog {
+    margin-top: 135px;
+    padding: 96px 0;
+    background: #fffcf4;
+}
+
+.blog .text-block .heading {
+    text-align: center;
+}
+
+.blog .text-block .desc {
+    margin: 16px auto auto;
+    width: 38%;
+    color: #696262;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 175%;
+}
+
+.blog-list {
+    margin-top: 55px;
+    display: flex;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.blog-item {
+    flex-shrink: 0;
+    width: calc((100% / 3) - 20px);
+    border-radius: 16px;
+    background: #fff;
+}
+
+.blog-item .thumb {
+    width: 100%;
+    height: 250px;
+    border-radius: 16px 16px 0px 0px;
+    object-fit: cover;
+}
+
+.blog-item .info {
+    padding: 20px 20px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.blog-item .date {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-bottom: 12px;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 185.714%;
+}
+
+.blog-item .date::before {
+    content: "";
+    margin-right: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.blog-item .date::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: calc(100% + 27px);
+    border-radius: 0.5px;
+    background: #e2dfda;
+}
+
+.blog-title {
+    margin-top: 12px;
+}
+
+.blog-title a {
+    color: #171100;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 175%;
+}
+
+.blog-item .btn {
+    margin-top: 12px;
+    font-size: 1.4rem;
+}
+
+.blog-item .btn:hover {
+    background: var(--primary-color);
+}
+
+.blog .dots {
+    margin-top: 38px;
+    justify-content: center;
+}
+
+.blog .dot:not(.active) {
+    background: #5f5b53;
 }
